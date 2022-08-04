@@ -23,9 +23,9 @@
 
 > <p>以下範例程式演示下載105年的全台灣所有城市和交易類別，下載路徑為：執行檔目錄\Download\105\{Season}\{CityNotation}_lvr_land_{TransactionType}.csv</p>
 <pre><code>
-     var SeasonList = Enum.GetValues<Season>();
-     var CityNotationList = Enum.GetValues<CityNotation>();
-     var TransactionTypeList = Enum.GetValues<TransactionType>();
+     var SeasonList = Enum.GetValues&ltSeason&gt();
+     var CityNotationList = Enum.GetValues&ltCityNotation&gt();
+     var TransactionTypeList = Enum.GetValues&ltTransactionType&gt();
      var Datalist = DownloadPath.DownloadPathFactory(105, 105, SeasonList, CityNotationList, TransactionTypeList, FileExtension.csv);
      await DownloadFileAciton.DownloadFilesAsync(Datalist);
 </code></pre>
